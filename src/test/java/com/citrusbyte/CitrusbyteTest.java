@@ -32,7 +32,7 @@ public class CitrusbyteTest {
     }
 
     @Test
-    public void isArray() {
-
+    public void testJS() {
+        // please look at main code => exist JS solution also
     }
 }

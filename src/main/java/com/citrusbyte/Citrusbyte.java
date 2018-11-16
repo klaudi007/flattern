@@ -35,24 +35,23 @@ public class Citrusbyte {
  *
  *
  * */
-
 /**
  *
+const flatteren = (arr, store = []) => {
+           for(let i=0; i<arr.length; i++){
+                if(isArr(arr[i])){
+                    flatteren(arr[i], store);
+                    }
+                else{
+                    store.push(arr[i]);
+                    }
+                }
+            return store;
+        }
 
-const flatteren = (arr, result = []) => {
-        for(let i=0; i<arr.length; i++){
-        if(isArr(arr[i])){
-        flatteren(arr[i], result);
-        }
-        else{
-        result.push(arr[i]);
-        }
-        }
-        return result;
-        }
 
  const isArr = (e) => e.length > 0 ? true : false;
 
-console.log(flatteren([1, 2, 3,[ 4, 5, [6, 7]],8]));
+ console.log(flatteren([1, 2, 3,[ 4, 5, [6, 7]],8]));
 
  */
